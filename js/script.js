@@ -18,3 +18,19 @@ const a=prompt("какой последний фильм вы посмотрел
 obj.movies[a]=b;
 obj.movies[c]=d;
 console.log(obj);
+const num = 50;
+    switch (num){
+        case 49:
+            console.log('abobus');
+        break;
+        case 45:
+            console.log('abobussss');
+        break;
+        case 100:
+            console.log('ahobus');
+        break;
+        default:
+            console.log('хуйня код, переделывай');
+        break; 
+
+    }
