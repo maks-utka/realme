@@ -4,4 +4,4 @@ while(num > 5) {
     num = num -7; 
 };
 console.log(num)
-console.log("ле ле ле ми дай"); A
+console.log("ле ле ле ми дай"); 
