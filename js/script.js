@@ -7,31 +7,32 @@ const obj = {
     gengers: arr =[],
     privat: false
 };
-console.log(obj.count);
-console.log(obj.privat);
 
 
-const a=prompt("какой последний фильм вы посмотрели", ""),
-      b=prompt("Насколько вы его можете оценить?", ""),
-      c=prompt("какой последний фильм вы посмотрели", ""),
-      d=prompt("Насколько вы его можете оценить?", "");
-obj.movies[a]=b;
-obj.movies[c]=d;
-console.log(obj);
-const num = 50;
-    switch (num){
-        case 49:
-            console.log('abobus');
-        break;
-        case 45:
-            console.log('abobussss');
-        break;
-        case 100:
-            console.log('ahobus');
-        break;
-        default:
-            console.log('хуйня код, переделывай');
-        break; 
-
-    }
+for(let i = 0; i < 2; i++) {
     
+        
+const a=prompt("какой последний фильм вы посмотрели", ""),
+      b=prompt("Насколько вы его можете оценить?", "");
+     if(a != null && b != null && a != "" && b != "" && a.length <50) {
+        obj.movies[a]=b; 
+        console.log("хорош");
+        
+     } else {
+         console.log("error");
+         i--
+     }
+
+
+
+};
+console.log(obj);
+if(obj.count>0 && obj.count<11){
+    alert("malo");
+} else if(obj.count>9 && obj.count <31){
+    alert("clasic");
+} else if(obj.count>30){
+    alert("kinoman");
+}else {
+    alert("ошибка");
+}

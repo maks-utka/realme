@@ -1,7 +1,13 @@
-let num = 1000;
-while(num > 5) {
-    console.log(num,"-7");
-    num = num -7; 
-};
-console.log(num)
-console.log("ле ле ле ми дай"); 
+for(let i = 1; i<10;i++){
+    switch(i){
+        case 2:
+        continue;
+        case 4:
+        continue;   
+        case 6:
+        continue;   
+        case 8:
+        continue;       
+    }
+    console.log(i);
+}
