@@ -22,10 +22,8 @@ function ShomMyDB(){
 
 ShomMyDB();
 function WriteYouGengers(){
-    let n=0;
     for(let i = 1; i < 4; i++){
-        PersonalMovieDB.geners[n]=prompt(`Ваш любимый жанр под номером ${i}`, ""),
-        n++;
+        PersonalMovieDB.geners[i-1]=prompt(`Ваш любимый жанр под номером ${i}`, "");
     }
 }
 
