@@ -11,3 +11,11 @@ for(let i = 1; i<10;i++){
     }
     console.log(i);
 }
+function showFirstMassage(text){
+    console.log(text);
+};
+showFirstMassage("aboba");
+showFirstMassage("amogus");
+let abobus = "жили были и так далее";
+abobus = abobus.toUpperCase();
+console.log(abobus.slice(10, 21));

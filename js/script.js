@@ -1,38 +1,59 @@
-const number0fFilms = prompt("Сколько Фильмов вы посмотрели?", "");
+let number0fFilms;
 
-const obj = {
+function start(){
+    number0fFilms = +prompt("Сколько Фильмов вы посмотрели?", "");
+    while(number0fFilms == '' || number0fFilms == null || isNaN(number0fFilms)){
+        number0fFilms = +prompt("Сколько Фильмов вы посмотрели?", "");
+    }
+}
+start();
+const PersonalMovieDB = {
     count:(number0fFilms) ,
     movies: {},
     actors: {},
-    gengers: arr =[],
+    geners: [],
     privat: false
 };
+function ShomMyDB(){
+    if(PersonalMovieDB.privat == false){
+        console.log(PersonalMovieDB);
+    }
+}
+
+ShomMyDB();
+function WriteYouGengers(){
+    let n=0;
+    for(let i = 1; i < 4; i++){
+        PersonalMovieDB.geners[n]=prompt(`Ваш любимый жанр под номером ${i}`, ""),
+        n++;
+    }
+}
+
+WriteYouGengers();
+function rememberMyFilms(){
+ for(let i = 0; i < 2; i++) {       
+    const a=prompt("какой последний фильм вы посмотрели", ""),
+          b=prompt("Насколько вы его можете оценить?", "");
+            if(a != null && b != null && a != "" && b != "" && a.length <50) {
+            PersonalMovieDB.movies[a]=b; 
+            console.log("хорош");
+            }
+            else {
+            console.log("error");
+            i--
+            }
+}
+}
 
 
-for(let i = 0; i < 2; i++) {
-    
-        
-const a=prompt("какой последний фильм вы посмотрели", ""),
-      b=prompt("Насколько вы его можете оценить?", "");
-     if(a != null && b != null && a != "" && b != "" && a.length <50) {
-        obj.movies[a]=b; 
-        console.log("хорош");
-        
-     } else {
-         console.log("error");
-         i--
-     }
-
-
-
-};
-console.log(obj);
-if(obj.count>0 && obj.count<11){
-    alert("malo");
-} else if(obj.count>9 && obj.count <31){
-    alert("clasic");
-} else if(obj.count>30){
-    alert("kinoman");
-}else {
-    alert("ошибка");
+function DetectPersonalLevel(){
+    if(PersonalMovieDB.count>0 && PersonalMovieDB.count<11){
+        alert("malo");
+    } else if(PersonalMovieDB.count>9 && PersonalMovieDB.count <31){
+        alert("clasic");
+    } else if(PersonalMovieDB.count>30){
+        alert("kinoman");
+    }else {
+        alert("ошибка");
+    }
 }
